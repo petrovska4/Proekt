@@ -72,6 +72,7 @@
       justify-content: center;
       padding: 0px 24px 0px 24px;
       align-items: flex-end;
+      position: relative;
     }
     .categories {
       font-weight: bolder;
@@ -79,7 +80,33 @@
       font-size: large;
     }
     .categories:hover {
-      color: #889855;
+      color: #c2a45f;
+    }
+    #clothesMenu {
+      display: none;
+    }
+    #clothes:hover + #clothesMenu {
+      display: block;
+    }
+    #homeItemsMenu {
+      display: none;
+    }
+    #homeItems:hover + #homeItemsMenu {
+      display: block;
+    }
+    #fragrancesMenu {
+      display: none;
+    }
+    #fragrances:hover + #fragrancesMenu {
+      display: block;
+    }
+    .categoriesMenu {
+      position: absolute;
+      z-index: 10;
+      top: 45px;
+      left: 0px;
+      right: 0px;
+      background-color: white;
     }
     #heart:hover, #usr:hover, #list:hover {
       transform: scale(1.5);
@@ -186,11 +213,70 @@
       font-size: large;
     }
 
+    .underline:hover {
+      text-decoration: underline #c2a45f;
+    }
     .padding12px {
       padding: 12px;
     }
+    .button {
+      background-color: #72623cd3;
+      border-radius: 8px;
+      margin: 0px 10px 0px 10px;
+      width: -webkit-fill-available;
+      font-size: large; 
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .popup {
+      position: relative;
+      display: inline-block;
+    }
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: rgb(255, 255, 255);
+      color: black;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      top: 45px;
+      left: 50%;
+      margin-left: -80px;
+    }
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color:  transparent transparent rgb(255, 255, 255) transparent;
+    }
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 0.5s;
+      animation: fadeIn 0.5s;
+    }
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;} 
+      to {opacity: 1;}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
   </style>
   <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+  <script>
+    function loginRegister() {
+      var popup = document.getElementById("loginPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
 </head>
 
 <body style="margin: 0px;">
@@ -214,36 +300,57 @@
         <input type="search" class="searchInput" placeholder="Search for items...">
       </div>
       <div id="menu" class="menu">
-        <div class="categories">
+        <div id="clothes" class="categories underline">
           Clothes
         </div>
-        <div class="categories">
+        <div id="clothesMenu" class="categoriesMenu">
+          <p>Dresses     Dinning Room    Bottoms</p>
+        </div>
+        <div id="homeItems" class="categories underline">
           Home Items
         </div>
-        <div class="categories">
+        <div id="homeItemsMenu" class="categoriesMenu">
+          <p>Living Room</p>
+          <p>Dinning Room</p>
+          <p>Bedroom</p>
+        </div>
+        <div id="fragrances" class="categories underline">
           Fragrances
         </div>
-        <div class="categories">
+        <div id="fragrancesMenu" class="categoriesMenu">
+          <p>For Her</p>
+          <p>For Him</p>
+        </div>
+        <div class="categories underline">
           Gift Cards
         </div>
-        <div class="categories">
+        <div class="categories underline">
           About Us
         </div>
       </div>
     </div>
     <div id="icons" class="padding12px">
-      <svg id="heart" class="lnr lnr-heart" style="padding-right: 12px;"><use xlink:href="#lnr-heart"></use>
-        <title>Wish List</title>
-      </svg>
-      <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>Login/Register
-      <svg id="list" class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use>
-        <title>Shopping Cart</title>
-      </svg>(0)
+      <div>
+        <svg id="heart" class="lnr lnr-heart" style="padding-right: 12px;"><use xlink:href="#lnr-heart"></use>
+          <title>Wish List</title>
+        </svg>
+        <svg id="list" class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use>
+          <title>Shopping Cart</title>
+        </svg>(0)
+      </div>
+      <div class="popup" id="login/register" onclick="loginRegister()" style="display: flex; flex-direction: row; margin-top: 10px;">
+        <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
+        <p class="underline">Login/Register</p>
+        <div id="loginPopup" class="popuptext">
+          <input type="button" class="button" value="Sign in">
+          <p class="underline">Register</p>
+        </div>
+      </div>
     </div>
   </div>
 
   <div id="body" class="body">
-    <div id="op1" class="options" onmouseover="test()">
+    <div id="op1" class="options">
       <div id="op11">
         <h1>Winter Collection</h1>
         <p>Introducing the must-have pieces for the 2023 Winter Collection</p>
