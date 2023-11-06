@@ -118,6 +118,10 @@
       height: 1em;
       vertical-align: -0.05em;
     }
+    #signInDialog {
+      border: thin solid #726138;
+      border-radius: 6px;
+    }
 
     .body {
       display: flex;
@@ -276,6 +280,12 @@
       var popup = document.getElementById("loginPopup");
       popup.classList.toggle("show");
     }
+    function showDialog() {
+      document.getElementById("signInDialog").showModal();
+    }
+    function closeDialog() {
+      document.getElementById("signInDialog").close();
+    }
   </script>
 </head>
 
@@ -342,9 +352,28 @@
         <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
         <p class="underline">Login/Register</p>
         <div id="loginPopup" class="popuptext">
-          <input type="button" class="button" value="Sign in">
+          <input id="signIn" onclick="showDialog()" type="button" class="button" value="Sign in">
           <p class="underline">Register</p>
         </div>
+        <dialog id="signInDialog" style="color: #726138; width: 200px;">
+          <div style="display: flex; justify-content: end;">
+            <svg class="lnr lnr-cross" onclick="closeDialog()"><use xlink:href="#lnr-cross"></use>
+              <title>Close form</title>
+            </svg>
+          </div>
+          <form style="height: 200px;">
+            <div style="margin: 50px 10px 20px 10px;">
+              <p>Email</p>
+              <input type="email" style="border: thin solid #7261387c;">
+            </div>
+            <div style="margin: 0px 10px 30px 10px;">
+              <p>Password</p>
+              <input type="password" style="border: thin solid #7261387c;">
+              <p style="font-size: small;">Forgot password?</p>
+            </div>
+            <input type="button" class="button" value="Sign in">
+          </form>
+        </dialog>
       </div>
     </div>
   </div>
