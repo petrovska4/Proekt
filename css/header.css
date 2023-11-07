@@ -1,0 +1,96 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    outline: 0.5px solid #72613881;
+    margin: 0px;
+    padding: 6px 12px 6px 12px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #726138;
+  }
+  .title {
+    padding: 24px 24px 0px 0px;
+    font-size: xx-large;
+  }
+  p {
+    margin: 0px;
+  }
+  .main {
+    flex-grow: 2;
+    border-left: 0.5px solid #72613881;
+    border-right: 0.5px solid #72613881;
+    padding: 12px 12px 0px 12px;
+  }
+  .searchInput {    
+    background: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-y: center;
+    background-position-x: 5px;
+    border: none;
+    height: 30px;
+    width: 100%;
+    padding-left: 25px;   
+  }
+  .menu {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px 24px 0px 24px;
+    align-items: flex-end;
+    position: relative;
+  }
+  .categories {
+    font-weight: bolder;
+    padding: 24px 24px 0px 24px;
+    font-size: large;
+  }
+  .categories:hover {
+    color: #c2a45f;
+  }
+  #clothesMenu {
+    display: none;
+  }
+  #clothes:hover + #clothesMenu {
+    display: block;
+  }
+  #homeItemsMenu {
+    display: none;
+  }
+  #homeItems:hover + #homeItemsMenu {
+    display: block;
+  }
+  #fragrancesMenu {
+    display: none;
+  }
+  #fragrances:hover + #fragrancesMenu {
+    display: block;
+  }
+  .categoriesMenu {
+    position: absolute;
+    z-index: 10;
+    top: 45px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+  }
+  #heart:hover, #usr:hover, #list:hover {
+    transform: scale(1.5);
+  }
+  .lnr {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.05em;
+  }
+  #signInDialog {
+    border: thin solid #726138;
+    border-radius: 6px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }

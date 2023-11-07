@@ -1,0 +1,76 @@
+.body {
+    display: flex;
+    flex-direction: row;
+    padding-left: 25%;
+    margin: 0px;
+    height: 84%;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(../images/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-left: thin solid #7261383a;
+    width: 15%;
+    color: rgba(255, 255, 240, 0.404);
+  }
+  #op1:hover #op11 {
+    color: ivory;
+    position: relative;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  #body:has(#op1:hover) {
+    background-image: url(../images/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s;
+  }
+  #op2:hover #op22 {
+    color: ivory;
+    position: relative;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  #body:has(#op2:hover) {
+    background-image: url(../images/background11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s;
+  }
+  #op3:hover #op33 {
+    color: ivory;
+    position: relative;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  #body:has(#op3:hover) {
+    background-image: url(../images/background10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s;
+  }
+  #op4:hover #op44 {
+    color: ivory;
+    position: relative;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  #body:has(#op4:hover) {
+    background-image: url(../images/background12.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 1s;
+  }
+  @keyframes move{
+    0% {bottom: 0px; color: rgba(255, 255, 240, 0.404);}
+    100% {bottom: 100px; color: ivory;}
+  }

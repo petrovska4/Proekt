@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    outline: thin solid #72613852;
+    margin: 0px 10% 0px 10%;
+    padding: 10px 5px 20px 5px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .footerBox {
+    width: 20%;
+  }
+  .footerTitles {
+    margin-bottom: 10px;
+    font-size: large;
+  }

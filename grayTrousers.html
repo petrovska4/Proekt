@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="css/preheader.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/clothes.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/grayTrousers.css">
+  <style>
+    html, body {
+      margin:0px;
+      height:100%;
+      width: 100%;
+    }
+    .underline:hover {
+      text-decoration: underline #c2a45f;
+    }
+    .padding12px {
+      padding: 12px;
+    }
+    .button {
+      background-color: #72623cd3;
+      border-radius: 8px;
+      margin: 0px 10px 0px 10px;
+      width: -webkit-fill-available;
+      font-size: large; 
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .popup {
+      position: relative;
+      display: inline-block;
+    }
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: rgb(255, 255, 255);
+      color: black;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      top: 45px;
+      left: 50%;
+      margin-left: -80px;
+    }
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color:  transparent transparent rgb(255, 255, 255) transparent;
+    }
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 0.5s;
+      animation: fadeIn 0.5s;
+    }
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;} 
+      to {opacity: 1;}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+  </style>
+  <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+  <script>
+    function loginRegister() {
+      var popup = document.getElementById("loginPopup");
+      popup.classList.toggle("show");
+    }
+    function showDialog() {
+      document.getElementById("signInDialog").showModal();
+    }
+    function closeDialog() {
+      document.getElementById("signInDialog").close();
+    }
+  </script>
+</head>
+
+<body style="margin: 0px;">
+  <div id="preheader" class="preheader">
+    <p class="discount">
+      Fall collection discount! Free shipping for order over 99$!
+    </p>
+  </div>
+
+  <div id="header" class="header">
+    <div id="title" class="title">
+      <a href="index.html">
+        <p>
+          <i>Pleure</i>
+        </p>
+        <p style="font-size: small;">
+          <i>all your wishes in one place</i>
+        </p>
+      </a>
+    </div>
+    <div id="main" class="main">
+      <div id="search" style="border-bottom: thin solid #72613881;">
+        <input type="search" class="searchInput" placeholder="Search for items...">
+      </div>
+      <div id="menu" class="menu">
+        <a href="clothes.html">
+          <div id="clothes" class="categories underline">
+            Clothes
+          </div>
+          <div id="clothesMenu" class="categoriesMenu">
+            <p>Dresses     Dinning Room    Bottoms</p>
+          </div>
+        </a>
+        <a href="homeItems.html">
+          <div id="homeItems" class="categories underline">
+            Home Items
+          </div>
+          <div id="homeItemsMenu" class="categoriesMenu">
+            <p>Living Room</p>
+            <p>Dinning Room</p>
+            <p>Bedroom</p>
+          </div>
+        </a>
+        <a href="fragrances.html">
+          <div id="fragrances" class="categories underline">
+            Fragrances
+          </div>
+          <div id="fragrancesMenu" class="categoriesMenu">
+            <p>For Her</p>
+            <p>For Him</p>
+          </div>
+        </a>
+        <a href="giftCards.html">
+          <div class="categories underline">
+            Gift Cards
+          </div>
+        </a>
+        <a href="aboutUs.html">
+          <div class="categories underline">
+            About Us
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="icons" class="padding12px">
+      <div>
+        <svg id="heart" class="lnr lnr-heart" style="padding-right: 12px;"><use xlink:href="#lnr-heart"></use>
+          <title>Wish List</title>
+        </svg>
+        <svg id="list" class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use>
+          <title>Shopping Cart</title>
+        </svg>(0)
+      </div>
+      <div class="popup" id="login/register" onclick="loginRegister()" style="display: flex; flex-direction: row; margin-top: 10px;">
+        <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
+        <p class="underline">Login/Register</p>
+        <div id="loginPopup" class="popuptext">
+          <input id="signIn" onclick="showDialog()" type="button" class="button" value="Sign in">
+          <p class="underline">Register</p>
+        </div>
+        <dialog id="signInDialog" style="color: #726138; width: 200px;">
+          <div style="display: flex; justify-content: end;">
+            <svg class="lnr lnr-cross" onclick="closeDialog()"><use xlink:href="#lnr-cross"></use>
+              <title>Close form</title>
+            </svg>
+          </div>
+          <form style="height: 200px;">
+            <div style="margin: 50px 10px 20px 10px;">
+              <p>Email</p>
+              <input type="email" style="border: thin solid #7261387c;">
+            </div>
+            <div style="margin: 0px 10px 30px 10px;">
+              <p>Password</p>
+              <input type="password" style="border: thin solid #7261387c;">
+              <p style="font-size: small;">Forgot password?</p>
+            </div>
+            <input type="button" class="button" value="Sign in">
+          </form>
+        </dialog>
+      </div>
+    </div>
+  </div>
+
+  <div id="body" class="body">
+    <div class="container">
+      <img id="img1" src="images/clothing1.jpg" alt="The picture can not be shown">
+      <div class="info">
+        <div style="display: flex; flex-direction: row; align-items: center;justify-content: space-between;">
+          <h1>Gray chic trousers</h1>
+          <svg class="lnr lnr-heart" style="font-size: 30px;"><use xlink:href="#lnr-heart"></use></svg>
+        </div>
+        <p>Likes: </p>
+        <h3>USD 80.00</h3>
+        <p style="padding-top: 10px;">Hand-sawn 100% cotton trousers.</p>
+        <p style="padding-top: 5px; color: #6d6b67;">Light gray/3456123</p>
+        <form>
+          <p style="margin: 50px 0px 5px 0px;">Choose your size</p>
+          <select name="Size" id="size">
+            <option selected disabled value="size">Select size</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <input type="button" class="button" value="Add to cart">
+        </form>
+      </div>
+      <img id="img11" src="images/clothing11.jpg" alt="The picture can not be shown">
+    </div>
+    <div class="reviews">
+      <h2>Customer reviews</h2>
+      <input type="text" placeholder="Add a comment...">
+      <div id="reviews"></div>
+    </div>
+  </div>
+
+  <div id="footer" class="footer">
+  <div id="about" class="footerBox">
+    <p class="footerTitles">About Pleure</p>
+    <p>About Us</p>
+  </div>
+  <div id="clientCare" class="footerBox">
+    <p class="footerTitles">Client Care</p>
+    <p>Contact Us</p>
+    <p>Privacy Policy</p>
+    <p>Terms & Conditions</p>
+  </div>
+  <div id="shipping" class="footerBox">
+    <p class="footerTitles">Shipping</p>
+    <p>Holiday Shipping</p>
+    <p>Same-Day Delivery</p>
+    <p>Phone Orders</p>
+  </div>
+  <div id="visitUs" class="footerBox">
+    <p class="footerTitles">Visit Us</p>
+    <p>Store Locator</p>
+  </div>
+  <div id="newsletter" class="footerBox">
+    <p class="footerTitles">Join Our Newsletter</p>
+    <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
+    <input type="text" placeholder="Enter Your email address">
+    <input type="submit" value="SIGN UP">
+  </div>
+</div>
+</body>
+</html>
