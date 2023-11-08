@@ -1,0 +1,26 @@
+.body {
+  height: 84%;
+  background-color: rgba(129, 95, 0, 0.041);
+  border-bottom: thin solid #72613852;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 20% 0px 20%;
+  border: thin solid rgba(255, 255, 255, 0.445);
+  margin-bottom: 250px;
+}
+.info {
+  border: thin solid #6d6b6759;
+  padding: 10px; display: flex;
+  flex-direction: column;
+}
+.img {
+  margin: 0px 20px 20px 20px;
+}
+img {
+  height: 450px;
+  width: 300px;
+}

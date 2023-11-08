@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Grey Trousers</title>
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <link rel="stylesheet" href="css/preheader.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/categories.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="grayTrousers.css">
   <style>
     html, body {
       margin:0px;
       height:100%;
+      width: 100%;
     }
     .underline:hover {
       text-decoration: underline #c2a45f;
@@ -95,7 +97,7 @@
 
   <div id="header" class="header">
     <div id="title" class="title">
-      <a href="index.html">
+      <a href="../index.html">
         <p>
           <i>Pleure</i>
         </p>
@@ -109,17 +111,17 @@
         <input type="search" class="searchInput" placeholder="Search for items...">
       </div>
       <div id="menu" class="menu">
-        <a href="clothes/index.html">
+        <a href="index.html">
           <div id="clothes" class="categories underline">
             Clothes
           </div>
         </a>
-        <a href="homeItems/index.html">
+        <a href="../homeItems/index.html">
           <div id="homeItems" class="categories underline">
             Home Items
           </div>
         </a>
-        <a href="fragrances/index.html">
+        <a href="../fragrances/index.html">
           <div id="fragrances" class="categories underline">
             Fragrances
           </div>
@@ -171,38 +173,37 @@
   </div>
 
   <div id="body" class="body">
-    <div id="op1" class="options">
-      <a href="clothes/index.html">
-        <div id="op11">
-          <h1>Winter Collection</h1>
-          <p>Introducing the must-have pieces for the 2023 Winter Collection</p>
+    <div class="container"  style="margin-bottom: 150px;">
+      <img id="img1" src="clothing1.jpg" alt="The picture can not be shown">
+      <div class="info">
+        <div style="display: flex; flex-direction: row; align-items: center;justify-content: space-between;">
+          <h1>Gray chic trousers</h1>
+          <svg class="lnr lnr-heart" style="font-size: 30px;"><use xlink:href="#lnr-heart"></use></svg>
         </div>
-      </a>
-    </div>
-    <div id="op2" class="options">
-      <a href="fragrances/si.html">
-        <div id="op22">
-          <h1>Smells like winter spirit</h1>
-          <p>Top notes: Cardamom, Bitter Almond, Pepper, Clementine
-            Heart notes: Jasmine, Carnation
-            Base notes: Sandalwood, Vanilla</p>
-        </div>
-      </a>
-    </div>
-    <div id="op3" class="options">
-      <a href="homeItems/index.html">
-        <div id="op33">
-          <h1>Live with style</h1>
-          <p>Our newest stool, made with the finest wood, is the necessary thing for a spectacular livingroom</p>
-        </div>
-      </a>
-    </div>
-    <div id="op4" class="options" style="border-right: thin solid #7261383a;">
-      <div id="op44">
-        <h1>About Pleure</h1>
-        <p>A brand that strongly tends to elevate your lifestyle through clothing, home pieces, fragrances and many more</p>
+        <p>Likes: </p>
+        <h3>USD 80.00</h3>
+        <p style="padding-top: 10px;">Hand-sawn 100% cotton trousers.</p>
+        <p style="padding-top: 5px; color: #6d6b67;">Light gray/3456123</p>
+        <form>
+          <p style="margin: 50px 0px 5px 0px;">Choose your size</p>
+          <select name="Size" id="size">
+            <option selected disabled value="size">Select size</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+          <input type="button" class="button" value="Add to cart">
+        </form>
       </div>
-    </div>  
+      <img id="img11" src="clothing11.jpg" alt="The picture can not be shown">
+    </div>
+    <div class="reviews">
+      <h2>Customer reviews</h2>
+      <input type="text" placeholder="Add a comment...">
+      <div id="reviews"></div>
+    </div>
   </div>
 
   <div id="footer" class="footer">

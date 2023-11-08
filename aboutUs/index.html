@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Fragrances</title>
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <link rel="stylesheet" href="css/preheader.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="categories.css">
+  <link rel="stylesheet" href="../css/footer.css">
   <style>
     html, body {
       margin:0px;
       height:100%;
+      width: 100%;
     }
     .underline:hover {
       text-decoration: underline #c2a45f;
@@ -95,7 +96,7 @@
 
   <div id="header" class="header">
     <div id="title" class="title">
-      <a href="index.html">
+      <a href="../index.html">
         <p>
           <i>Pleure</i>
         </p>
@@ -109,22 +110,22 @@
         <input type="search" class="searchInput" placeholder="Search for items...">
       </div>
       <div id="menu" class="menu">
-        <a href="clothes/index.html">
+        <a href="../clothes/index.html">
           <div id="clothes" class="categories underline">
             Clothes
           </div>
         </a>
-        <a href="homeItems/index.html">
+        <a href="../homeItems/index.html">
           <div id="homeItems" class="categories underline">
             Home Items
           </div>
         </a>
-        <a href="fragrances/index.html">
+        <a href="../fragrances/index.html">
           <div id="fragrances" class="categories underline">
             Fragrances
           </div>
         </a>
-        <a href="aboutUs.html">
+        <a href="index.html">
           <div class="categories underline">
             About Us
           </div>
@@ -170,70 +171,63 @@
     </div>
   </div>
 
-  <div id="body" class="body">
-    <div id="op1" class="options">
-      <a href="clothes/index.html">
-        <div id="op11">
-          <h1>Winter Collection</h1>
-          <p>Introducing the must-have pieces for the 2023 Winter Collection</p>
+  <div style="min-height: 500px; overflow: scroll;">
+    <div id="body" class="body">
+      <div id="item" class="container">
+        <div class="aboutUs">
+          <h1>About Us</h1>
+          <p style="height: 500px; max-width: fit-content;">When you choose Pleure, you choose more than just clothing; you choose a commitment to quality, sustainability, and individuality. Join us on this fashion journey and become a part of a community that values authenticity and embraces personal style.</p>
         </div>
-      </a>
-    </div>
-    <div id="op2" class="options">
-      <a href="fragrances/si.html">
-        <div id="op22">
-          <h1>Smells like winter spirit</h1>
-          <p>Top notes: Cardamom, Bitter Almond, Pepper, Clementine
-            Heart notes: Jasmine, Carnation
-            Base notes: Sandalwood, Vanilla</p>
+        <img id="img1" src="aboutUs.jpg" alt="The picture can not be shown">
+        <div style="margin: 1% 10% 0px 10%; border: thin solid #7261387c;" >
+          <h2>About Us</h2>
+          <p>Welcome to Pleure, where fashion meets innovation and style meets authenticity. At Pleure, we're more than just a clothing brand; we're a lifestyle and a statement.</p>
+          <h2>Our Story</h2>
+          <p>Founded in 2023, Pleure was created out of a passion for fashion, a love for quality, and a dedication to sustainable practices. Our journey started with a small group of visionaries who aimed to revolutionize the way people perceive and experience clothing.</p>
+          <h2>What We Believe In</h2>
+          <p>At Pleure, we hold dear a set of values that steer our brand forward:</p>
+          <ul>
+            <li>Quality Craftsmanship: We take pride in crafting clothing that is not just beautiful but also built to last. Our attention to detail and commitment to quality ensures that each piece we create is an embodiment of excellence.</li>
+            <li>Sustainability: We're committed to making a positive impact on the environment. We use eco-friendly materials and sustainable production practices to reduce our carbon footprint.</li>
+            <li>Inclusivity: We believe that fashion should be for everyone, regardless of gender, age, or size. Our collections are designed to be inclusive and diverse.</li>
+            <li>Customer Satisfaction: Your satisfaction is our priority. We strive to provide top-notch customer service and a seamless shopping experience.</li>
+          </ul>
         </div>
-      </a>
-    </div>
-    <div id="op3" class="options">
-      <a href="homeItems/index.html">
-        <div id="op33">
-          <h1>Live with style</h1>
-          <p>Our newest stool, made with the finest wood, is the necessary thing for a spectacular livingroom</p>
-        </div>
-      </a>
-    </div>
-    <div id="op4" class="options" style="border-right: thin solid #7261383a;">
-      <div id="op44">
-        <h1>About Pleure</h1>
-        <p>A brand that strongly tends to elevate your lifestyle through clothing, home pieces, fragrances and many more</p>
       </div>
-    </div>  
+    </div>
+
+    <div id="footer" class="footer">
+      <div id="about" class="footerBox">
+        <p class="footerTitles">About Pleure</p>
+        <p>About Us</p>
+      </div>
+      <div id="shipping" class="footerBox">
+        <p class="footerTitles">Shipping</p>
+        <p>Holiday Shipping</p>
+        <p>Same-Day Delivery</p>
+        <p>Phone Orders</p>
+      </div>
+      <div id="visitUs" class="footerBox">
+        <p class="footerTitles">Visit Us</p>
+        <p>Store Locator</p>
+      </div>
+      <div id="clientCare" class="footerBox">
+        <p class="footerTitles">Follow Us</p>
+        <p>Instagram</p>
+        <p>Facebook</p>
+        <p>Pinterest</p>
+        <p>Youtube</p>
+      </div>
+      <div id="newsletter" class="footerBox">
+        <p class="footerTitles">Join Our Newsletter</p>
+        <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
+        <form>
+          <input type="email" placeholder="Enter Your email address">
+          <input type="submit" value="SIGN UP">
+        </form>
+      </div>
+    </div>
   </div>
 
-  <div id="footer" class="footer">
-    <div id="about" class="footerBox">
-      <p class="footerTitles">About Pleure</p>
-      <p>About Us</p>
-    </div>
-    <div id="clientCare" class="footerBox">
-      <p class="footerTitles">Client Care</p>
-      <p>Contact Us</p>
-      <p>Privacy Policy</p>
-      <p>Terms & Conditions</p>
-    </div>
-    <div id="shipping" class="footerBox">
-      <p class="footerTitles">Shipping</p>
-      <p>Holiday Shipping</p>
-      <p>Same-Day Delivery</p>
-      <p>Phone Orders</p>
-    </div>
-    <div id="visitUs" class="footerBox">
-      <p class="footerTitles">Visit Us</p>
-      <p>Store Locator</p>
-    </div>
-    <div id="newsletter" class="footerBox">
-      <p class="footerTitles">Join Our Newsletter</p>
-      <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
-      <form>
-        <input type="email" placeholder="Enter Your email address">
-        <input type="submit" value="SIGN UP">
-      </form>
-    </div>
-  </div>
 </body>
 </html>

@@ -8,6 +8,7 @@ select {
   margin-bottom: 50px;
 }
 .reviews {
+  background-color: white;
   margin: 10px 50px 10px 50px;
   padding: 20px 20px 20px 20px;
   border: thin solid #6d6b6759;

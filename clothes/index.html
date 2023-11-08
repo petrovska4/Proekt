@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Clothes</title>
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-  <link rel="stylesheet" href="css/preheader.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/clothes.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/grayTrousers.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/categories.css">
+  <link rel="stylesheet" href="../css/footer.css">
   <style>
     html, body {
       margin:0px;
@@ -85,6 +84,42 @@
     function closeDialog() {
       document.getElementById("signInDialog").close();
     }
+    function hoverImage1(image) {
+      image.setAttribute('src', 'clothing11.jpg');
+    }
+    function unhoverImage1(image) {
+      image.setAttribute('src', 'clothing1.jpg');
+    }
+    function hoverImage2(image) {
+      image.setAttribute('src', 'clothing21.jpg');
+    }
+    function unhoverImage2(image) {
+      image.setAttribute('src', 'clothing2.jpg');
+    }
+    function hoverImage3(image) {
+      image.setAttribute('src', 'clothing31.jpg');
+    }
+    function unhoverImage3(image) {
+      image.setAttribute('src', 'clothing3.jpg');
+    }
+    function hoverImage4(image) {
+      image.setAttribute('src', 'clothing41.jpg');
+    }
+    function unhoverImage4(image) {
+      image.setAttribute('src', 'clothing4.jpg');
+    }
+    function hoverImage5(image) {
+      image.setAttribute('src', 'clothing51.jpg');
+    }
+    function unhoverImage5(image) {
+      image.setAttribute('src', 'clothing5.jpg');
+    }
+    function hoverImage6(image) {
+      image.setAttribute('src', 'clothing61.jpg');
+    }
+    function unhoverImage6(image) {
+      image.setAttribute('src', 'clothing6.jpg');
+    }
   </script>
 </head>
 
@@ -97,7 +132,7 @@
 
   <div id="header" class="header">
     <div id="title" class="title">
-      <a href="index.html">
+      <a href="../index.html">
         <p>
           <i>Pleure</i>
         </p>
@@ -111,36 +146,19 @@
         <input type="search" class="searchInput" placeholder="Search for items...">
       </div>
       <div id="menu" class="menu">
-        <a href="clothes.html">
+        <a href="index.html">
           <div id="clothes" class="categories underline">
             Clothes
           </div>
-          <div id="clothesMenu" class="categoriesMenu">
-            <p>Dresses     Dinning Room    Bottoms</p>
-          </div>
         </a>
-        <a href="homeItems.html">
+        <a href="../homeItems/index.html">
           <div id="homeItems" class="categories underline">
             Home Items
           </div>
-          <div id="homeItemsMenu" class="categoriesMenu">
-            <p>Living Room</p>
-            <p>Dinning Room</p>
-            <p>Bedroom</p>
-          </div>
         </a>
-        <a href="fragrances.html">
+        <a href="../fragrances/index.html">
           <div id="fragrances" class="categories underline">
             Fragrances
-          </div>
-          <div id="fragrancesMenu" class="categoriesMenu">
-            <p>For Her</p>
-            <p>For Him</p>
-          </div>
-        </a>
-        <a href="giftCards.html">
-          <div class="categories underline">
-            Gift Cards
           </div>
         </a>
         <a href="aboutUs.html">
@@ -188,68 +206,80 @@
       </div>
     </div>
   </div>
+  <div style="min-height: 500px; overflow: scroll;">
 
-  <div id="body" class="body">
-    <div class="container">
-      <img id="img1" src="images/clothing1.jpg" alt="The picture can not be shown">
-      <div class="info">
-        <div style="display: flex; flex-direction: row; align-items: center;justify-content: space-between;">
-          <h1>Gray chic trousers</h1>
-          <svg class="lnr lnr-heart" style="font-size: 30px;"><use xlink:href="#lnr-heart"></use></svg>
+    <div id="body" class="body">
+      <div class="container">
+        <div id="item1" class="img">
+          <div style="position: absolute; z-index: 15; background-color: rgb(255, 51, 0); margin: 10px 10px 10px 10px;">
+            <p style="color: white; font-family: inherit; margin: 5px 5px 5px 5px;">30%</p>
+          </div>
+          <a href="grayTrousers.html">
+            <img id="img1" src="clothing1.jpg" alt="The picture can not be shown" onmouseover="hoverImage1(this)" onmouseout="unhoverImage1(this)">
+            <p>Gray chic trousers</p>
+          </a>
+          <p style="text-decoration: line-through; display: inline;">$80</p>
+          <p style="color: rgb(255, 51, 0); display: inline;">$56</p>
         </div>
-        <p>Likes: </p>
-        <h3>USD 80.00</h3>
-        <p style="padding-top: 10px;">Hand-sawn 100% cotton trousers.</p>
-        <p style="padding-top: 5px; color: #6d6b67;">Light gray/3456123</p>
+        <div id="item2" class="img">
+          <img src="clothing2.jpg" alt="The picture can not be shown" onmouseover="hoverImage2(this)" onmouseout="unhoverImage2(this)">
+          <p>Vintage sneakers</p>
+          <p>$380</p>
+        </div>
+        <div id="item3" class="img">
+          <img src="clothing3.jpg" alt="The picture can not be shown" onmouseover="hoverImage3(this)" onmouseout="unhoverImage3(this)">
+          <p>Emerald watch</p>
+          <p>$560</p>
+        </div>
+        <div id="item4" class="img">
+          <img src="clothing4.jpg" alt="The picture can not be shown" onmouseover="hoverImage4(this)" onmouseout="unhoverImage4(this)">
+          <p>Everyday small leather bag</p>
+          <p>$260</p>
+        </div>
+        <div id="item5" class="img">
+          <img src="clothing5.jpg" alt="The picture can not be shown" onmouseover="hoverImage5(this)" onmouseout="unhoverImage5(this)">
+          <p>Black leather backpack</p>
+          <p>$390</p>
+        </div>
+        <div id="item6" class="img">
+          <img src="clothing6.jpg" alt="The picture can not be shown" onmouseover="hoverImage6(this)" onmouseout="unhoverImage6(this)">
+          <p>Oh, yes. Sweatshirt</p>
+          <p>$110</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="footer">
+      <div id="about" class="footerBox">
+        <p class="footerTitles">About Pleure</p>
+        <p>About Us</p>
+      </div>
+      <div id="clientCare" class="footerBox">
+        <p class="footerTitles">Client Care</p>
+        <p>Contact Us</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+      </div>
+      <div id="shipping" class="footerBox">
+        <p class="footerTitles">Shipping</p>
+        <p>Holiday Shipping</p>
+        <p>Same-Day Delivery</p>
+        <p>Phone Orders</p>
+      </div>
+      <div id="visitUs" class="footerBox">
+        <p class="footerTitles">Visit Us</p>
+        <p>Store Locator</p>
+      </div>
+      <div id="newsletter" class="footerBox">
+        <p class="footerTitles">Join Our Newsletter</p>
+        <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
         <form>
-          <p style="margin: 50px 0px 5px 0px;">Choose your size</p>
-          <select name="Size" id="size">
-            <option selected disabled value="size">Select size</option>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-          <input type="button" class="button" value="Add to cart">
+          <input type="email" placeholder="Enter Your email address">
+          <input type="submit" value="SIGN UP">
         </form>
       </div>
-      <img id="img11" src="images/clothing11.jpg" alt="The picture can not be shown">
-    </div>
-    <div class="reviews">
-      <h2>Customer reviews</h2>
-      <input type="text" placeholder="Add a comment...">
-      <div id="reviews"></div>
     </div>
   </div>
 
-  <div id="footer" class="footer">
-  <div id="about" class="footerBox">
-    <p class="footerTitles">About Pleure</p>
-    <p>About Us</p>
-  </div>
-  <div id="clientCare" class="footerBox">
-    <p class="footerTitles">Client Care</p>
-    <p>Contact Us</p>
-    <p>Privacy Policy</p>
-    <p>Terms & Conditions</p>
-  </div>
-  <div id="shipping" class="footerBox">
-    <p class="footerTitles">Shipping</p>
-    <p>Holiday Shipping</p>
-    <p>Same-Day Delivery</p>
-    <p>Phone Orders</p>
-  </div>
-  <div id="visitUs" class="footerBox">
-    <p class="footerTitles">Visit Us</p>
-    <p>Store Locator</p>
-  </div>
-  <div id="newsletter" class="footerBox">
-    <p class="footerTitles">Join Our Newsletter</p>
-    <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
-    <input type="text" placeholder="Enter Your email address">
-    <input type="submit" value="SIGN UP">
-  </div>
-</div>
 </body>
 </html>
