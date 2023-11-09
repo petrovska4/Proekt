@@ -86,6 +86,7 @@
       document.getElementById("signInDialog").close();
     }
   </script>
+  <script src="grayTrousers.js"></script>
 </head>
 
 <body style="margin: 0px;">
@@ -95,7 +96,7 @@
     </p>
   </div>
 
-  <div id="header" class="header">
+  <header id="header" class="header">
     <div id="title" class="title">
       <a href="../index.html">
         <p>
@@ -126,7 +127,7 @@
             Fragrances
           </div>
         </a>
-        <a href="aboutUs.html">
+        <a href="../aboutUs/index.html">
           <div class="categories underline">
             About Us
           </div>
@@ -170,71 +171,73 @@
         </dialog>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div id="body" class="body">
-    <div class="container"  style="margin-bottom: 150px;">
-      <img id="img1" src="clothing1.jpg" alt="The picture can not be shown">
-      <div class="info">
-        <div style="display: flex; flex-direction: row; align-items: center;justify-content: space-between;">
-          <h1>Gray chic trousers</h1>
-          <svg class="lnr lnr-heart" style="font-size: 30px;"><use xlink:href="#lnr-heart"></use></svg>
+  <div style="min-height: 500px; overflow: scroll;">
+    <div id="body" class="body">
+      <div class="container"  style="flex-wrap: nowrap; margin-bottom: 150px;">
+        <img id="img1" src="clothing1.jpg" alt="The picture can not be shown">
+        <div class="info" style="margin: 0px 5px 0px 5px;">
+          <div style="display: flex; flex-direction: row; align-items: center;justify-content: space-between;">
+            <h1>Gray chic trousers</h1>
+            <svg id="like" class="lnr lnr-heart" onclick="like()" style="font-size: 30px;" ><use xlink:href="#lnr-heart"></use></svg>
+          </div>
+          <p id="likeCount">Likes: </p>
+          <h3>USD 80.00</h3>
+          <p style="padding-top: 10px;">Hand-sawn 100% cotton trousers.</p>
+          <p style="padding-top: 5px; color: #6d6b67;">Light gray/3456123</p>
+          <form>
+            <p style="margin: 50px 0px 5px 0px;">Choose your size</p>
+            <select name="Size" id="size">
+              <option selected disabled value="size">Select size</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <input type="button" class="button" value="Add to cart">
+          </form>
         </div>
-        <p>Likes: </p>
-        <h3>USD 80.00</h3>
-        <p style="padding-top: 10px;">Hand-sawn 100% cotton trousers.</p>
-        <p style="padding-top: 5px; color: #6d6b67;">Light gray/3456123</p>
+        <img id="img11" src="clothing11.jpg" alt="The picture can not be shown">
+      </div>
+      <div class="reviews">
+        <h2>Customer reviews</h2>
+        <input type="text" placeholder="Add a comment...">
+        <div id="reviews"></div>
+      </div>
+    </div>
+  
+    <footer id="footer" class="footer">
+      <div id="about" class="footerBox">
+        <p class="footerTitles">About Pleure</p>
+        <p>About Us</p>
+      </div>
+      <div id="clientCare" class="footerBox">
+        <p class="footerTitles">Client Care</p>
+        <p>Contact Us</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+      </div>
+      <div id="shipping" class="footerBox">
+        <p class="footerTitles">Shipping</p>
+        <p>Holiday Shipping</p>
+        <p>Same-Day Delivery</p>
+        <p>Phone Orders</p>
+      </div>
+      <div id="visitUs" class="footerBox">
+        <p class="footerTitles">Visit Us</p>
+        <p>Store Locator</p>
+      </div>
+      <div id="newsletter" class="footerBox">
+        <p class="footerTitles">Join Our Newsletter</p>
+        <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
         <form>
-          <p style="margin: 50px 0px 5px 0px;">Choose your size</p>
-          <select name="Size" id="size">
-            <option selected disabled value="size">Select size</option>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-          <input type="button" class="button" value="Add to cart">
+          <input type="email" placeholder="Enter Your email address">
+          <input type="submit" value="SIGN UP">
         </form>
       </div>
-      <img id="img11" src="clothing11.jpg" alt="The picture can not be shown">
-    </div>
-    <div class="reviews">
-      <h2>Customer reviews</h2>
-      <input type="text" placeholder="Add a comment...">
-      <div id="reviews"></div>
-    </div>
-  </div>
-
-  <div id="footer" class="footer">
-    <div id="about" class="footerBox">
-      <p class="footerTitles">About Pleure</p>
-      <p>About Us</p>
-    </div>
-    <div id="clientCare" class="footerBox">
-      <p class="footerTitles">Client Care</p>
-      <p>Contact Us</p>
-      <p>Privacy Policy</p>
-      <p>Terms & Conditions</p>
-    </div>
-    <div id="shipping" class="footerBox">
-      <p class="footerTitles">Shipping</p>
-      <p>Holiday Shipping</p>
-      <p>Same-Day Delivery</p>
-      <p>Phone Orders</p>
-    </div>
-    <div id="visitUs" class="footerBox">
-      <p class="footerTitles">Visit Us</p>
-      <p>Store Locator</p>
-    </div>
-    <div id="newsletter" class="footerBox">
-      <p class="footerTitles">Join Our Newsletter</p>
-      <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
-      <form>
-        <input type="email" placeholder="Enter Your email address">
-        <input type="submit" value="SIGN UP">
-      </form>
-    </div>
+    </footer>
   </div>
 </body>
 </html>

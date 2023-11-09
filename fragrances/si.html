@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/categories.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="si.css">
+  <script src="si.js"></script>
   <style>
     html, body {
       margin:0px;
@@ -95,7 +96,7 @@
     </p>
   </div>
 
-  <div id="header" class="header">
+  <header id="header" class="header">
     <div id="title" class="title">
       <a href="../index.html">
         <p>
@@ -126,7 +127,7 @@
             Fragrances
           </div>
         </a>
-        <a href="aboutUs.html">
+        <a href="../aboutUs/index.html">
           <div class="categories underline">
             About Us
           </div>
@@ -170,7 +171,7 @@
         </dialog>
       </div>
     </div>
-  </div>
+  </header>
 
   <div style="min-height: 500px; overflow: scroll;">
     <div id="body" class="body">
@@ -179,17 +180,17 @@
         <div class="info" style="margin: 0px 5px 0px 5px;">
           <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
             <h1>Smells like winter spirit</h1>
-            <svg class="lnr lnr-heart" style="font-size: 30px; margin-left: 10px"><use xlink:href="#lnr-heart"></use></svg>
+            <svg id="like" class="lnr lnr-heart" onclick="like()" style="font-size: 30px; margin-left: 10px"><use xlink:href="#lnr-heart"></use></svg>
           </div>
-          <p>Likes: </p>
-          <h3>USD 220.00</h3>
+          <p id="likeCount">Likes: </p>
+          <h3 id="price">USD </h3>
           <p style="padding-top: 10px;">Top notes: Cardamom, Bitter Almond, Pepper, Clementine Heart</p>
           <p>Notes: Jasmine, Carnation</p>
           <p>Base notes: Sandalwood, Vanilla</p>
           <p style="padding-top: 5px; color: #6d6b67;">Fragrance1/3456123</p>
           <form>
             <p style="margin: 50px 0px 5px 0px;">Choose size</p>
-            <select name="Size" id="size">
+            <select name="Size" id="size" onchange="changePrice()">
               <option value="30ml">30ml</option>
               <option value="50ml">50ml</option>
               <option value="100ml">100ml</option>
@@ -201,12 +202,12 @@
       </div>
       <div class="reviews">
         <h2>Customer reviews</h2>
-        <input type="text" placeholder="Add a comment...">
+        <input id="addReview" type="text" placeholder="Add a comment...">
         <div id="reviews"></div>
       </div>
     </div>
 
-    <div id="footer" class="footer">
+    <footer id="footer" class="footer">
       <div id="about" class="footerBox">
         <p class="footerTitles">About Pleure</p>
         <p>About Us</p>
@@ -235,7 +236,7 @@
           <input type="submit" value="SIGN UP">
         </form>
       </div>
-    </div>
+    </footer>
   </div>
 </body>
 </html>

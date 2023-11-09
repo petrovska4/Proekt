@@ -50,7 +50,7 @@
   .categories:hover {
     color: #c2a45f;
   }
-  #clothesMenu {
+  /* #clothesMenu {
     display: none;
   }
   #clothes:hover + #clothesMenu {
@@ -75,7 +75,7 @@
     left: 0px;
     right: 0px;
     background-color: white;
-  }
+  } */
   #heart:hover, #usr:hover, #list:hover {
     transform: scale(1.5);
   }
