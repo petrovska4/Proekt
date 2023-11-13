@@ -74,19 +74,8 @@
     }
   </style>
   <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-  <script>
-    function loginRegister() {
-      var popup = document.getElementById("loginPopup");
-      popup.classList.toggle("show");
-    }
-    function showDialog() {
-      document.getElementById("signInDialog").showModal();
-    }
-    function closeDialog() {
-      document.getElementById("signInDialog").close();
-    }
-  </script>
   <script src="grayTrousers.js"></script>
+  <script src="../logIn.js"></script>
 </head>
 
 <body style="margin: 0px;">
@@ -139,13 +128,13 @@
         <svg id="heart" class="lnr lnr-heart" style="padding-right: 12px;"><use xlink:href="#lnr-heart"></use>
           <title>Wish List</title>
         </svg>
-        <svg id="list" class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use>
+          <svg id="list" class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use>
           <title>Shopping Cart</title>
         </svg>(0)
       </div>
-      <div class="popup" id="login/register" onclick="loginRegister()" style="display: flex; flex-direction: row; margin-top: 10px;">
+      <div class="popup" id="login/register" style="display: flex; flex-direction: row; margin-top: 10px;">
         <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
-        <p class="underline">Login/Register</p>
+        <p id="user" class="underline">Login/Register</p>
         <div id="loginPopup" class="popuptext">
           <input id="signIn" onclick="showDialog()" type="button" class="button" value="Sign in">
           <p class="underline">Register</p>
@@ -159,14 +148,36 @@
           <form style="height: 200px;">
             <div style="margin: 50px 10px 20px 10px;">
               <p>Email</p>
-              <input type="email" style="border: thin solid #7261387c;">
+              <input id="email" type="email" style="border: thin solid #7261387c;">
             </div>
             <div style="margin: 0px 10px 30px 10px;">
               <p>Password</p>
-              <input type="password" style="border: thin solid #7261387c;">
+              <input id="password" type="password" style="border: thin solid #7261387c;">
               <p style="font-size: small;">Forgot password?</p>
             </div>
-            <input type="button" class="button" value="Sign in">
+            <input id="signInForm" type="button" class="button" value="Sign in">
+          </form>
+        </dialog>
+        <dialog id="registerDialog" style="color: #726138; width: 200px;">
+          <div style="display: flex; justify-content: end;">
+            <svg class="lnr lnr-cross" onclick="closeRegisterDialog()"><use xlink:href="#lnr-cross"></use>
+              <title>Close form</title>
+            </svg>
+          </div>
+          <form style="height: 200px;">
+            <div style="margin: 50px 10px 20px 10px;">
+              <p>Name</p>
+              <input type="text" name="name" id="name">
+            </div>
+            <div style="margin: 0px 10px 20px 10px;">
+              <p>Email</p>
+              <input id="emailRegister" type="email" style="border: thin solid #7261387c;">
+            </div>
+            <div style="margin: 0px 10px 30px 10px;">
+              <p>Password</p>
+              <input id="passwordRegister" type="password" style="border: thin solid #7261387c;">
+            </div>
+            <input id="registerForm" type="button" class="button" value="Register">
           </form>
         </dialog>
       </div>
@@ -183,12 +194,16 @@
             <svg id="like" class="lnr lnr-heart" onclick="like()" style="font-size: 30px;" ><use xlink:href="#lnr-heart"></use></svg>
           </div>
           <p id="likeCount">Likes: </p>
-          <h3>USD 80.00</h3>
+          <h3>
+            <p style="text-decoration: line-through; display: inline;">$80</p>
+            <p id="priceGT" style="color: rgb(255, 51, 0); display: inline;">$56</p>
+            <p style="color: rgb(255, 51, 0); font-family: inherit; display: inline; margin: 5px 5px 5px 15px;">30%</p>            
+          </h3>
           <p style="padding-top: 10px;">Hand-sawn 100% cotton trousers.</p>
           <p style="padding-top: 5px; color: #6d6b67;">Light gray/3456123</p>
           <form>
             <p style="margin: 50px 0px 5px 0px;">Choose your size</p>
-            <select name="Size" id="size">
+            <select name="Size" id="sizeGT">
               <option selected disabled value="size">Select size</option>
               <option value="XS">XS</option>
               <option value="S">S</option>
@@ -196,7 +211,7 @@
               <option value="L">L</option>
               <option value="XL">XL</option>
             </select>
-            <input type="button" class="button" value="Add to cart">
+            <input id="addGT" type="button" class="button" value="Add to cart">
           </form>
         </div>
         <img id="img11" src="clothing11.jpg" alt="The picture can not be shown">
@@ -239,5 +254,6 @@
       </div>
     </footer>
   </div>
+  <script src="../shoppingCart.js"></script>
 </body>
 </html>

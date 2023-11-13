@@ -73,17 +73,8 @@
     }
   </style>
   <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+  <script src="../logIn.js"></script>
   <script>
-    function loginRegister() {
-      var popup = document.getElementById("loginPopup");
-      popup.classList.toggle("show");
-    }
-    function showDialog() {
-      document.getElementById("signInDialog").showModal();
-    }
-    function closeDialog() {
-      document.getElementById("signInDialog").close();
-    }
     function hoverImage1(image) {
       image.setAttribute('src', 'fragrances11.jpg');
     }
@@ -177,9 +168,9 @@
           <title>Shopping Cart</title>
         </svg>(0)
       </div>
-      <div class="popup" id="login/register" onclick="loginRegister()" style="display: flex; flex-direction: row; margin-top: 10px;">
+      <div class="popup" id="login/register" style="display: flex; flex-direction: row; margin-top: 10px;">
         <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
-        <p class="underline">Login/Register</p>
+        <p id="user" class="underline">Login/Register</p>
         <div id="loginPopup" class="popuptext">
           <input id="signIn" onclick="showDialog()" type="button" class="button" value="Sign in">
           <p class="underline">Register</p>
@@ -193,14 +184,36 @@
           <form style="height: 200px;">
             <div style="margin: 50px 10px 20px 10px;">
               <p>Email</p>
-              <input type="email" style="border: thin solid #7261387c;">
+              <input id="email" type="email" style="border: thin solid #7261387c;">
             </div>
             <div style="margin: 0px 10px 30px 10px;">
               <p>Password</p>
-              <input type="password" style="border: thin solid #7261387c;">
+              <input id="password" type="password" style="border: thin solid #7261387c;">
               <p style="font-size: small;">Forgot password?</p>
             </div>
-            <input type="button" class="button" value="Sign in">
+            <input id="signInForm" type="button" class="button" value="Sign in">
+          </form>
+        </dialog>
+        <dialog id="registerDialog" style="color: #726138; width: 200px;">
+          <div style="display: flex; justify-content: end;">
+            <svg class="lnr lnr-cross" onclick="closeRegisterDialog()"><use xlink:href="#lnr-cross"></use>
+              <title>Close form</title>
+            </svg>
+          </div>
+          <form style="height: 200px;">
+            <div style="margin: 50px 10px 20px 10px;">
+              <p>Name</p>
+              <input type="text" name="name" id="name">
+            </div>
+            <div style="margin: 0px 10px 20px 10px;">
+              <p>Email</p>
+              <input id="emailRegister" type="email" style="border: thin solid #7261387c;">
+            </div>
+            <div style="margin: 0px 10px 30px 10px;">
+              <p>Password</p>
+              <input id="passwordRegister" type="password" style="border: thin solid #7261387c;">
+            </div>
+            <input id="registerForm" type="button" class="button" value="Register">
           </form>
         </dialog>
       </div>

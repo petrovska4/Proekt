@@ -16,3 +16,11 @@ select {
 #like:hover {
   transform: scale(1.5);
 }
+.inputReview {
+  border: none;
+  border-bottom: thin solid #6d6b6759;
+  width: 100%;
+}
+.reviews {
+  margin: 10px 0px 0px 5px;
+}

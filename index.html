@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pleure</title>
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="css/preheader.css">
   <link rel="stylesheet" href="css/header.css">
@@ -73,16 +73,6 @@
   </style>
   <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
   <script>
-    function loginRegister() {
-      var popup = document.getElementById("loginPopup");
-      popup.classList.toggle("show");
-    }
-    function showDialog() {
-      document.getElementById("signInDialog").showModal();
-    }
-    function closeDialog() {
-      document.getElementById("signInDialog").close();
-    }
   </script>
 </head>
 
@@ -140,12 +130,12 @@
           <title>Shopping Cart</title>
         </svg>(0)
       </div>
-      <div class="popup" id="login/register" onclick="loginRegister()" style="display: flex; flex-direction: row; margin-top: 10px;">
+      <div class="popup" id="login/register" style="display: flex; flex-direction: row; margin-top: 10px;">
         <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
-        <p class="underline">Login/Register</p>
+        <p id="user" class="underline">Login/Register</p>
         <div id="loginPopup" class="popuptext">
           <input id="signIn" onclick="showDialog()" type="button" class="button" value="Sign in">
-          <p class="underline">Register</p>
+          <p onclick="showRegisterDialog()" class="underline">Register</p>
         </div>
         <dialog id="signInDialog" style="color: #726138; width: 200px;">
           <div style="display: flex; justify-content: end;">
@@ -156,14 +146,36 @@
           <form style="height: 200px;">
             <div style="margin: 50px 10px 20px 10px;">
               <p>Email</p>
-              <input type="email" style="border: thin solid #7261387c;">
+              <input id="email" type="email" style="border: thin solid #7261387c;">
             </div>
             <div style="margin: 0px 10px 30px 10px;">
               <p>Password</p>
-              <input type="password" style="border: thin solid #7261387c;">
+              <input id="password" type="password" style="border: thin solid #7261387c;">
               <p style="font-size: small;">Forgot password?</p>
             </div>
-            <input type="button" class="button" value="Sign in">
+            <input id="signInForm" type="button" class="button" value="Sign in">
+          </form>
+        </dialog>
+        <dialog id="registerDialog" style="color: #726138; width: 200px;">
+          <div style="display: flex; justify-content: end;">
+            <svg class="lnr lnr-cross" onclick="closeRegisterDialog()"><use xlink:href="#lnr-cross"></use>
+              <title>Close form</title>
+            </svg>
+          </div>
+          <form style="height: 200px;">
+            <div style="margin: 50px 10px 20px 10px;">
+              <p>Name</p>
+              <input type="text" name="name" id="name">
+            </div>
+            <div style="margin: 0px 10px 20px 10px;">
+              <p>Email</p>
+              <input id="emailRegister" type="email" style="border: thin solid #7261387c;">
+            </div>
+            <div style="margin: 0px 10px 30px 10px;">
+              <p>Password</p>
+              <input id="passwordRegister" type="password" style="border: thin solid #7261387c;">
+            </div>
+            <input id="registerForm" type="button" class="button" value="Register">
           </form>
         </dialog>
       </div>
@@ -175,17 +187,15 @@
       <a href="clothes/index.html">
         <div id="op11">
           <h1>Winter Collection</h1>
-          <p>Introducing the must-have pieces for the 2023 Winter Collection</p>
+          <p>This winter, redefine your style with our enchanting Winter Collection. Whether you're seeking cozy essentials for everyday wear or statement pieces for special occasions, our carefully curated selection has something for every fashionista.</p>
         </div>
       </a>
     </div>
     <div id="op2" class="options">
       <a href="fragrances/si.html">
         <div id="op22">
-          <h1>Smells like winter spirit</h1>
-          <p>Top notes: Cardamom, Bitter Almond, Pepper, Clementine
-            Heart notes: Jasmine, Carnation
-            Base notes: Sandalwood, Vanilla</p>
+          <h1>Essence of Elegance</h1>
+          <p>Step into a world where each scent is a masterpiece, carefully crafted to evoke emotions and memories. Our fragrance collection is a symphony of olfactory delights, capturing the essence of sophistication and individuality.</p>
         </div>
       </a>
     </div>
@@ -193,7 +203,7 @@
       <a href="homeItems/index.html">
         <div id="op33">
           <h1>Live with style</h1>
-          <p>Our newest stool, made with the finest wood, is the necessary thing for a spectacular livingroom</p>
+          <p>Step into a realm of comfort and style as we introduce our meticulously curated Home Essentials Collection. From the heart of your home to the cozy corners of your personal space, each item has been thoughtfully chosen to enhance your daily living experience.</p>
         </div>
       </a>
     </div>
@@ -201,7 +211,7 @@
       <a href="aboutUs/index.html">
         <div id="op44">
           <h1>About Pleure</h1>
-          <p>A brand that strongly tends to elevate your lifestyle through clothing, home pieces, fragrances and many more</p>
+          <p>Immerse yourself in a world of curated collections that transcend the ordinary, offering a seamless blend of fashion, fragrance, and home essentials.</p>
         </div>
       </a>
     </div>  
@@ -237,5 +247,7 @@
       </form>
     </div>
   </footer>
+  
+  <script src="logIn.js"></script>
 </body>
 </html>

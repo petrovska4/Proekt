@@ -75,18 +75,7 @@
     }
   </style>
   <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-  <script>
-    function loginRegister() {
-      var popup = document.getElementById("loginPopup");
-      popup.classList.toggle("show");
-    }
-    function showDialog() {
-      document.getElementById("signInDialog").showModal();
-    }
-    function closeDialog() {
-      document.getElementById("signInDialog").close();
-    }
-  </script>
+  <script src="../logIn.js"></script>
 </head>
 
 <body style="margin: 0px;">
@@ -143,9 +132,9 @@
           <title>Shopping Cart</title>
         </svg>(0)
       </div>
-      <div class="popup" id="login/register" onclick="loginRegister()" style="display: flex; flex-direction: row; margin-top: 10px;">
+      <div class="popup" id="login/register" style="display: flex; flex-direction: row; margin-top: 10px;">
         <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
-        <p class="underline">Login/Register</p>
+        <p id="user" class="underline">Login/Register</p>
         <div id="loginPopup" class="popuptext">
           <input id="signIn" onclick="showDialog()" type="button" class="button" value="Sign in">
           <p class="underline">Register</p>
@@ -159,14 +148,36 @@
           <form style="height: 200px;">
             <div style="margin: 50px 10px 20px 10px;">
               <p>Email</p>
-              <input type="email" style="border: thin solid #7261387c;">
+              <input id="email" type="email" style="border: thin solid #7261387c;">
             </div>
             <div style="margin: 0px 10px 30px 10px;">
               <p>Password</p>
-              <input type="password" style="border: thin solid #7261387c;">
+              <input id="password" type="password" style="border: thin solid #7261387c;">
               <p style="font-size: small;">Forgot password?</p>
             </div>
-            <input type="button" class="button" value="Sign in">
+            <input id="signInForm" type="button" class="button" value="Sign in">
+          </form>
+        </dialog>
+        <dialog id="registerDialog" style="color: #726138; width: 200px;">
+          <div style="display: flex; justify-content: end;">
+            <svg class="lnr lnr-cross" onclick="closeRegisterDialog()"><use xlink:href="#lnr-cross"></use>
+              <title>Close form</title>
+            </svg>
+          </div>
+          <form style="height: 200px;">
+            <div style="margin: 50px 10px 20px 10px;">
+              <p>Name</p>
+              <input type="text" name="name" id="name">
+            </div>
+            <div style="margin: 0px 10px 20px 10px;">
+              <p>Email</p>
+              <input id="emailRegister" type="email" style="border: thin solid #7261387c;">
+            </div>
+            <div style="margin: 0px 10px 30px 10px;">
+              <p>Password</p>
+              <input id="passwordRegister" type="password" style="border: thin solid #7261387c;">
+            </div>
+            <input id="registerForm" type="button" class="button" value="Register">
           </form>
         </dialog>
       </div>
@@ -179,8 +190,8 @@
         <img id="img1" src="fragrances1.jpg" alt="The picture can not be shown">
         <div class="info" style="margin: 0px 5px 0px 5px;">
           <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
-            <h1>Smells like winter spirit</h1>
-            <svg id="like" class="lnr lnr-heart" onclick="like()" style="font-size: 30px; margin-left: 10px"><use xlink:href="#lnr-heart"></use></svg>
+            <h1 id="titleSi">Smells like winter spirit</h1>
+            <svg id="like" class="lnr lnr-heart" style="font-size: 30px; margin-left: 10px"><use xlink:href="#lnr-heart"></use></svg>
           </div>
           <p id="likeCount">Likes: </p>
           <h3 id="price">USD </h3>
@@ -190,21 +201,33 @@
           <p style="padding-top: 5px; color: #6d6b67;">Fragrance1/3456123</p>
           <form>
             <p style="margin: 50px 0px 5px 0px;">Choose size</p>
-            <select name="Size" id="size" onchange="changePrice()">
+            <select name="Size" id="sizeSi">
               <option value="30ml">30ml</option>
               <option value="50ml">50ml</option>
               <option value="100ml">100ml</option>
             </select>
-            <input type="button" class="button" value="Add to cart">
+            <input id="addSi" type="button" class="button" value="Add to cart">
           </form>
         </div>
         <img id="img11" src="fragrances11.jpg" alt="The picture can not be shown">
       </div>
       <div class="reviews">
-        <h2>Customer reviews</h2>
-        <input id="addReview" type="text" placeholder="Add a comment...">
-        <div id="reviews"></div>
+        <h2 id="reviewsCount">Customer reviews</h2>
+        <input id="addReview" type="text" placeholder="Add a comment..." class="inputReview">
+        <div id="reviews" class="reviews"></div>
       </div>
+      <dialog id="cartSi" style="color: #726138; width: 500px;">
+        <div style="display: flex; justify-content: space-between;">
+          <h1 style="font-family: inherit; color: inherit;">Cart</h1>
+          <svg class="lnr lnr-cross" onclick="closeCartDialog()"><use xlink:href="#lnr-cross"></use>
+            <title>Close form</title>
+          </svg>
+        </div>
+        <div id="addHere" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+        </div>
+        <input id="buyNow" type="button" class="button" style="margin-top: 10px;" value="Buy now">
+      </dialog>
     </div>
 
     <footer id="footer" class="footer">
