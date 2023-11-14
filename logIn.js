@@ -56,4 +56,5 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('login/register').addEventListener('click', loginRegister);
   signInForm.addEventListener('click', submit);
   registerForm.addEventListener('click', register);
+  document.getElementById('register').addEventListener('click', showRegisterDialog);
 });

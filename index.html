@@ -114,6 +114,11 @@
             Fragrances
           </div>
         </a>
+        <a href="contactForm/index.html">
+          <div id="contactForm" class="categories underline">
+            Contact form
+          </div>
+        </a>
         <a href="aboutUs/index.html">
           <div class="categories underline">
             About Us
@@ -123,12 +128,10 @@
     </div>
     <div id="icons" class="padding12px">
       <div>
-        <svg id="heart" class="lnr lnr-heart" style="padding-right: 12px;"><use xlink:href="#lnr-heart"></use>
-          <title>Wish List</title>
-        </svg>
-        <svg id="list" class="lnr lnr-cart"><use xlink:href="#lnr-cart"></use>
+        <svg id="list" class="lnr lnr-cart" onclick="showCartDialog()"><use xlink:href="#lnr-cart"></use>
           <title>Shopping Cart</title>
-        </svg>(0)
+        </svg>
+        <p id="productsCount" style="display: inline;"></p>
       </div>
       <div class="popup" id="login/register" style="display: flex; flex-direction: row; margin-top: 10px;">
         <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
@@ -156,7 +159,7 @@
             <input id="signInForm" type="button" class="button" value="Sign in">
           </form>
         </dialog>
-        <dialog id="registerDialog" style="color: #726138; width: 200px;">
+        <dialog id="registerDialog" style="color: #726138; width: 200px; padding-bottom: 50px;">
           <div style="display: flex; justify-content: end;">
             <svg class="lnr lnr-cross" onclick="closeRegisterDialog()"><use xlink:href="#lnr-cross"></use>
               <title>Close form</title>
@@ -222,12 +225,6 @@
       <p class="footerTitles">About Pleure</p>
       <p>About Us</p>
     </div>
-    <div id="clientCare" class="footerBox">
-      <p class="footerTitles">Client Care</p>
-      <p>Contact Us</p>
-      <p>Privacy Policy</p>
-      <p>Terms & Conditions</p>
-    </div>
     <div id="shipping" class="footerBox">
       <p class="footerTitles">Shipping</p>
       <p>Holiday Shipping</p>
@@ -236,13 +233,35 @@
     </div>
     <div id="visitUs" class="footerBox">
       <p class="footerTitles">Visit Us</p>
-      <p>Store Locator</p>
+      <div class="icons">
+        <svg class="lnr lnr-map-marker"><use xlink:href="#lnr-map-marker"></use></svg>
+        <p>Store Locator</p>
+      </div>
+    </div>
+    <div id="clientCare" class="footerBox">
+      <p class="footerTitles">Follow Us</p>
+      <div class="icons">
+        <img src="images/instagram.png">
+        <p>Instagram</p>
+      </div>
+      <div class="icons">
+        <img src="images/facebook.png">
+        <p>Facebook</p>
+      </div>
+      <div class="icons">
+        <img src="images/pinterest.png">
+        <p>Pinterest</p>
+      </div>
+      <div class="icons">
+        <img src="images/linkedin.png">
+        <p>LinkedIn</p>
+      </div>
     </div>
     <div id="newsletter" class="footerBox">
       <p class="footerTitles">Join Our Newsletter</p>
       <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
       <form>
-        <input type="email" placeholder="Enter Your email address">
+        <input type="email" placeholder="Enter Your email address" required>
         <input type="submit" value="SIGN UP">
       </form>
     </div>

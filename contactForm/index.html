@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clothes</title>
+  <title>Fragrances</title>
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="../css/preheader.css">
   <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/categories.css">
   <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="contactForm.css">
   <style>
     html, body {
       margin:0px;
@@ -73,54 +73,6 @@
     }
   </style>
   <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-  <script>
-    function loginRegister() {
-      var popup = document.getElementById("loginPopup");
-      popup.classList.toggle("show");
-    }
-    function showDialog() {
-      document.getElementById("signInDialog").showModal();
-    }
-    function closeDialog() {
-      document.getElementById("signInDialog").close();
-    }
-    function hoverImage1(image) {
-      image.setAttribute('src', 'clothing11.jpg');
-    }
-    function unhoverImage1(image) {
-      image.setAttribute('src', 'clothing1.jpg');
-    }
-    function hoverImage2(image) {
-      image.setAttribute('src', 'clothing21.jpg');
-    }
-    function unhoverImage2(image) {
-      image.setAttribute('src', 'clothing2.jpg');
-    }
-    function hoverImage3(image) {
-      image.setAttribute('src', 'clothing31.jpg');
-    }
-    function unhoverImage3(image) {
-      image.setAttribute('src', 'clothing3.jpg');
-    }
-    function hoverImage4(image) {
-      image.setAttribute('src', 'clothing41.jpg');
-    }
-    function unhoverImage4(image) {
-      image.setAttribute('src', 'clothing4.jpg');
-    }
-    function hoverImage5(image) {
-      image.setAttribute('src', 'clothing51.jpg');
-    }
-    function unhoverImage5(image) {
-      image.setAttribute('src', 'clothing5.jpg');
-    }
-    function hoverImage6(image) {
-      image.setAttribute('src', 'clothing61.jpg');
-    }
-    function unhoverImage6(image) {
-      image.setAttribute('src', 'clothing6.jpg');
-    }
-  </script>
   <script src="../logIn.js"></script>
 </head>
 
@@ -147,7 +99,7 @@
         <input type="search" class="searchInput" placeholder="Search for items...">
       </div>
       <div id="menu" class="menu">
-        <a href="index.html">
+        <a href="../clothes/index.html">
           <div id="clothes" class="categories underline">
             Clothes
           </div>
@@ -162,7 +114,7 @@
             Fragrances
           </div>
         </a>
-        <a href="../contactForm/index.html">
+        <a href="index.html">
           <div id="contactForm" class="categories underline">
             Contact form
           </div>
@@ -204,7 +156,7 @@
               <input id="password" type="password" style="border: thin solid #7261387c;">
               <p style="font-size: small;">Forgot password?</p>
             </div>
-            <input id="signInForm" type="button" class="button" value="Sign in">
+            <input id="signInForm" type="submit" class="button" value="Sign in">
           </form>
         </dialog>
         <dialog id="registerDialog" style="color: #726138; width: 200px; padding-bottom: 50px;">
@@ -232,47 +184,39 @@
       </div>
     </div>
   </header>
-  <div style="min-height: 500px; overflow: scroll;">
 
-    <div id="body" class="body">
-      <div class="container">
-        <div id="item1" class="img">
-          <div style="position: absolute; z-index: 15; background-color: rgb(255, 51, 0); margin: 10px 10px 10px 10px;">
-            <p style="color: white; font-family: inherit; margin: 5px 5px 5px 5px;">30%</p>
-          </div>
-          <a href="grayTrousers.html">
-            <img id="img1" src="clothing1.jpg" alt="The picture can not be shown" onmouseover="hoverImage1(this)" onmouseout="unhoverImage1(this)">
-            <p>Gray chic trousers</p>
-          </a>
-          <p style="text-decoration: line-through; display: inline;">$80</p>
-          <p style="color: rgb(255, 51, 0); display: inline;">$56</p>
+  <div style="min-height: 500px; overflow: scroll;">
+    <div class="container">
+      <form id="body" class="body">
+        <div>
+          <p>Name</p>
+          <input class="inputs" type="text" placeholder="Input name here..." required>
         </div>
-        <div id="item2" class="img">
-          <img src="clothing2.jpg" alt="The picture can not be shown" onmouseover="hoverImage2(this)" onmouseout="unhoverImage2(this)">
-          <p>Vintage sneakers</p>
-          <p>$380</p>
+        <div>
+          <p>Surname</p>
+          <input class="inputs" type="text" placeholder="Input surame here..." required>
         </div>
-        <div id="item3" class="img">
-          <img src="clothing3.jpg" alt="The picture can not be shown" onmouseover="hoverImage3(this)" onmouseout="unhoverImage3(this)">
-          <p>Emerald watch</p>
-          <p>$560</p>
+        <div>
+          <p>Phone number</p>
+          <input class="inputs" type="tel" placeholder="+389********" required>
         </div>
-        <div id="item4" class="img">
-          <img src="clothing4.jpg" alt="The picture can not be shown" onmouseover="hoverImage4(this)" onmouseout="unhoverImage4(this)">
-          <p>Everyday small leather bag</p>
-          <p>$260</p>
+        <div>
+          <p>Sex</p>
+          <input type="radio" name="radAnswer">
+          <p style="color: #726138; display: inline; font-size: medium; font-weight: lighter;">Male</p>
+          <input type="radio" name="radAnswer">
+          <p style="color: #726138; display: inline; font-size: medium; font-weight: lighter;">Female</p>
+          <input type="radio" name="radAnswer">
+          <p style="color: #726138; display: inline; font-size: medium; font-weight: lighter;">Other</p>
         </div>
-        <div id="item5" class="img">
-          <img src="clothing5.jpg" alt="The picture can not be shown" onmouseover="hoverImage5(this)" onmouseout="unhoverImage5(this)">
-          <p>Black leather backpack</p>
-          <p>$390</p>
+        <div>
+          <p>Your impressions</p>
+          <textarea cols="30" rows="10"></textarea>
         </div>
-        <div id="item6" class="img">
-          <img src="clothing6.jpg" alt="The picture can not be shown" onmouseover="hoverImage6(this)" onmouseout="unhoverImage6(this)">
-          <p>Oh, yes. Sweatshirt</p>
-          <p>$110</p>
+        <div>
+          <input type="submit" value="Submit" class="button">
         </div>
-      </div>
+      </form>
     </div>
 
     <footer id="footer" class="footer">

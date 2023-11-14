@@ -1,6 +1,8 @@
 .container {
-  margin: 0px 15% 100px 15%;
+  padding: 0px 15% 100px 15%;
   text-align: center;
+  background-color: rgba(129, 95, 0, 0.041);
+  border-bottom: thin solid #72613852;
 }
 img {
   max-width: 100%;

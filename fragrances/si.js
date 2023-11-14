@@ -1,6 +1,21 @@
 let likesF = JSON.parse(localStorage.getItem('likesF')) || 0;
-let price = localStorage.getItem('priceSi') || '220';
-var reviewsCount = 0;
+let price = JSON.parse(localStorage.getItem('priceSi')) || 220;
+let reviewsCount = 0;
+let productsCount = 0;
+const existingReviews = JSON.parse(localStorage.getItem('reviews')) || []; 
+reviewsCount = existingReviews.length;
+
+let total = parseFloat(localStorage.getItem('total')) || 0;
+
+if(total) {
+  total = 0;
+  localStorage.setItem('total', JSON.stringify(total));
+}
+
+existingReviews.forEach(review => {
+  addObject(review);
+});
+
 var selectedValue;
 
 function like() {
@@ -13,35 +28,43 @@ function changePrice() {
   selectedValue = document.getElementById('sizeSi').value;
   if (selectedValue == "30ml") {
     document.getElementById('price').innerText = "USD 220.00";
-    localStorage.setItem('priceSi', '220');
+    localStorage.setItem('priceSi', 220);
   } else if (selectedValue == "50ml") {
     document.getElementById('price').innerText = "USD 360.00";
-    localStorage.setItem('priceSi', '360');
+    localStorage.setItem('priceSi', 360);
   } else {
     document.getElementById('price').innerText = "USD 450.00";
-    localStorage.setItem('priceSi', '450');
+    localStorage.setItem('priceSi', 450);
   }
 }
 
-function addReview(e) {
-  const tag = document.createElement("p");
-  const text = document.createTextNode(e.target.value);
+function addReview(e) {  
+  const text = e.target.value;
   const date = new Date().toLocaleDateString([], { hour: '2-digit', minute: '2-digit' });
-  tag.appendChild(document.createTextNode("Date: " + date));
+
+  const object = { date: date, text: text};
+  existingReviews.push(object);
+  localStorage.setItem('reviews', JSON.stringify(existingReviews));
+  
+  addObject(object);
+  
+  reviewsCount += 1;
+  document.getElementById('reviewsCount').innerText = "Cutomer reviews (" + reviewsCount + ")"; 
+
+  document.getElementById('addReview').value = '';
+}
+
+function addObject(object) {
+  const tag = document.createElement("p");
+  tag.appendChild(document.createTextNode("Date: " + object.date));
   tag.appendChild(document.createElement('br'));
-  tag.appendChild(text);
+  tag.appendChild(document.createTextNode(object.text));
 
   const div = document.createElement("div");
   div.style.margin = "10px 0px 0px 0px";
   div.appendChild(tag);
 
-  reviewsCount += 1;
-  
   document.getElementById('reviews').appendChild(div);
-
-  document.getElementById('reviewsCount').innerText = "Cutomer reviews (" + reviewsCount + ")"; 
-
-  document.getElementById('addReview').value = '';
 }
 
 function addItem() {
@@ -52,10 +75,8 @@ function addItem() {
   img.style.height = "150px";
   img.style.width = "auto";
 
-  var priceSi = localStorage.getItem('priceSi');
-
   var text1 = document.createTextNode("Smells like winter spirit");
-  var text2 = document.createTextNode("Price: " + priceSi + ".00");
+  var text2 = document.createTextNode("Price: " + price + ".00");
   var text3 = document.createTextNode("Size: " + selectedValue);
 
   var br1 = document.createElement('br');
@@ -77,7 +98,19 @@ function addItem() {
   document.getElementById('addHere').appendChild(tag);
   showCartDialog();
 
+  productsCount += 1;
+  document.getElementById('productsCount').innerText = "(" + productsCount + ")";
+
+  total += price;
+  localStorage.setItem('total', JSON.stringify(total));
+  document.getElementById('total').innerText = "Total: " + total;
+
   exit.addEventListener('click', function() {
+    productsCount -= 1;
+    total -= price;
+    document.getElementById('total').innerText = "Total: " + total;
+    localStorage.setItem('total', JSON.stringify(total));
+    document.getElementById('productsCount').innerText = "(" + productsCount + ")";
     tag.remove();
   });
 }
@@ -99,6 +132,9 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('addSi').addEventListener('click', addItem);
   document.getElementById('like').addEventListener('click', like);
   document.getElementById('buyNow').addEventListener('click', closeCartDialog);
+
+  document.getElementById('productsCount').innerText = "(" + productsCount + ")";
+  document.getElementById('total').innerText = "Total: " + total;
 
   const input = document.getElementById("addReview");
   input.addEventListener("keydown", function(e) {

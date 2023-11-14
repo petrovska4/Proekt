@@ -50,32 +50,6 @@
   .categories:hover {
     color: #c2a45f;
   }
-  /* #clothesMenu {
-    display: none;
-  }
-  #clothes:hover + #clothesMenu {
-    display: block;
-  }
-  #homeItemsMenu {
-    display: none;
-  }
-  #homeItems:hover + #homeItemsMenu {
-    display: block;
-  }
-  #fragrancesMenu {
-    display: none;
-  }
-  #fragrances:hover + #fragrancesMenu {
-    display: block;
-  }
-  .categoriesMenu {
-    position: absolute;
-    z-index: 10;
-    top: 45px;
-    left: 0px;
-    right: 0px;
-    background-color: white;
-  } */
   #heart:hover, #usr:hover, #list:hover {
     transform: scale(1.5);
   }
