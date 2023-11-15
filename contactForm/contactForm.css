@@ -30,7 +30,7 @@ textarea {
   border-bottom: thin solid #6d6b6759;
   font-size: large;
   font-weight: lighter;
-  font-family: inherit; 
+  font-family: 'Courier New', Courier, monospace; 
   width: -webkit-fill-available; 
 }
 .button {
